@@ -1,0 +1,125 @@
+.header{
+    width: 100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: var(--z-fixed);
+    background-color: var( --container-color);
+}
+.nav{
+    height:calc(var(--header-height)+1.5rem);
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center ;
+    column-gap: 1rem;
+}
+.nav__icon{
+    width: 20px;
+    height: auto;
+    margin-bottom: 5px;
+}
+.nav__list{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    column-gap: 2rem;
+}
+.nav__item{
+    font-weight: var(--font-light);
+    font-size: var(--small-font-size);
+}
+
+
+.nav_link{
+    font-family: var(--header-font);
+    color:var(--body-color);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+}
+.active-link,
+.nav_link:hover {
+    color:var(  --title-color);
+    border-bottom-style: solid;
+    padding-bottom: 6px;
+    border-color: #A84E4F;
+    border-width: 2px;
+
+}
+.nav__close,.nav__toggle,.nav__icon{
+    display: none;
+}
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
+}
+@media screen and (max-width: 768px) {
+    .header{
+        top:initial;
+        bottom: 0;
+    }
+
+    .nav{
+        height: var(--header-height);
+    }
+    .nav__icon,
+    .nav__close,
+    .nav__toggle{
+        display: block;
+ }
+
+    .nav__menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        padding:1rem 1.5rem 1rem;
+        box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
+        border-radius: 0.5rem 0.5rem 0 0;
+        transition: .3s;
+        background-color: white;
+    }
+
+    .show-menu{
+        bottom:0;
+    }
+
+    .nav__close{
+        position: absolute;
+        right:1.5rem;
+        bottom:2rem;
+        cursor: pointer;
+
+    }
+    .nav__close:hover{
+        width: 25px;
+        height: auto;
+        transition: .3ms;
+
+    }
+    .nav__logo{
+        width: 36px;
+        height: auto;
+    }
+
+    .nav__toggle{
+        cursor: pointer;
+    } 
+    .nav_link{
+        font-size: var( --smaller-font-size);
+    }
+}
+@media screen and (max-width: 350px) {
+    .nav__menu{
+        padding:0.5rem 1rem 0.5rem;
+        font-size: var( --smaller-font-size);
+    }
+    .nav_link{
+        font-size: var( --tiny-font-size);
+    }
+    .nav__close{
+        right:1rem;
+        bottom:1rem;
+    }
+}

@@ -1,0 +1,124 @@
+/* Add this CSS in a separate file or within your component file */
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 16px;
+    font-family: var(--header-font);
+  }
+  form{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  table{
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  .api-container {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .api-request-container{
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    color: rgb(71, 82, 74);
+    padding: 20px;
+    /* border-radius: 5px; */
+   
+    
+  }
+  .api-method{
+    font-weight: 700;
+    font-family: var(--body-font);
+    color:var(--text-color-1);
+    font-size: 12px;
+    background-color: var(--subtitle-color);
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    line-height: 20px;
+  }
+  .api-header {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+    font-family: var(--header-font);
+  }
+  .api-request{
+    font-size: 18px;
+    padding-left: 5px;
+  }
+  .api-response-title{
+    font-weight: 500;
+    color: black;
+    font-size: 16px;
+  }
+  
+  .api-endpoint-title {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .api-table-head,
+  .api-table-data {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: rgb(71, 82, 74);
+    font-size: var(--smaller-font-size);
+
+  
+  }
+ 
+  .api-table-head {
+    background-color: var(--text-color-3);
+ 
+  }
+  .api-table-data{
+    font-family: var(--body-font);
+  }
+
+  .api-response{
+    margin-top: 15px;
+    
+  }
+
+  .api-response-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+   
+  }
+  
+  .icon-check {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .api-icon-arraw{
+    width: 10px;
+    height: 8px;
+    margin-right: 10px;
+    /* margin-right: 10px; */
+  }
+  .api-response-content {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: var(--tiny-font-size);
+    border-radius: 5px;
+    background-color: var(--text-color-3);
+    font-family: var(--body-font);
+    font-weight: 300;
+  }
+  
+  /* Add more styles as needed */
+  .json {
+    white-space: pre-wrap;
+  overflow-wrap: break-word;
+  }
