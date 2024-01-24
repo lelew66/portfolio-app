@@ -68,8 +68,16 @@ const APIData = [
     url_params: ["project id", "number", "true", "project id"],
     body_params: null,
     response_200:
-      '{"id":1, "name":"ShopCeramix", "description":"Ceramix is an online platform dedicated to displaying and selling exquisite ceramic masterpieces. The user interface (UI) design encompasses various pages to ensure a seamless and engaging experience for visitors.","technologies":["React.js","Node.js","mongoDB","REST API","AWS EC2","Git Action"],"Gitlink":"https://github.com/lelew66/ShopCeramix"}',
-    response_404: '{ message: "Data not found" }',
+    [
+        {
+            id: 3,
+            name: "Bubble Tea Project",
+            description:
+              "The teahouse management system targets teahouse owners, employees, and customers. Teahouse owners use the system to manage employee information, products, inventory, and monitor sales. Employees utilize it for order processing, while customers can browse the menu and place orders.",
+            technologies: "C#",
+            Gitlink: "https://github.com/lelew66/Bubble-Tea-Project",
+          }],
+        response_404: '{ message: "Data not found" }',
     response_500: "{ message: err.message }",
   },
 ];
@@ -78,6 +86,9 @@ const API = () => {
   const [showResponse200, setShowResponse200] = useState(false);
   const [showResponse400, setShowResponse400] = useState(false);
   const [showResponse500, setShowResponse500] = useState(false);
+  const [showResponse2, setShowResponse2] = useState(false);
+  const [showResponse4, setShowResponse4] = useState(false);
+  const [showResponse5, setShowResponse5] = useState(false);
 
   const handleArrowClick = () => {
     setShowResponse200(!showResponse200);
@@ -87,6 +98,15 @@ const API = () => {
   };
   const handleArrowClick2 = () => {
     setShowResponse500(!showResponse500);
+  };
+  const handleArrowClick3 = () => {
+    setShowResponse2(!showResponse2);
+  };
+  const handleArrowClick4 = () => {
+    setShowResponse4(!showResponse4);
+  };
+  const handleArrowClick5 = () => {
+    setShowResponse5(!showResponse5);
   };
 
   return (
@@ -280,7 +300,7 @@ const API = () => {
                     src={Arrow}
                     alt="project images"
                     className="api-icon-arraw"
-                    onClick={handleArrowClick}
+                    onClick={handleArrowClick3}
                   />
                 </span>
                 <span className="icon-check">
@@ -288,10 +308,10 @@ const API = () => {
                 </span>
                 <span className="api-response-title">Response 200</span>
               </div>
-              {showResponse200 && (
+              {showResponse2 && (
                 <div className="api-response-content">
                   <p className="json">
-                    {JSON.stringify(APIData[1].response_200, null, 2)}
+                    {JSON.stringify(APIData[1].response_200,null,2)}
                   </p>
                 </div>
               )}
@@ -304,7 +324,7 @@ const API = () => {
                     src={Arrow}
                     alt="project images"
                     className="api-icon-arraw"
-                    onClick={handleArrowClick1}
+                    onClick={handleArrowClick4}
                   />
                 </span>
                 <span className="icon-check">
@@ -312,7 +332,7 @@ const API = () => {
                 </span>
                 <span className="api-response-title">Response 404</span>
               </div>
-              {showResponse400 && (
+              {showResponse4 && (
                 <div className="api-response-content">
                   <p>{APIData[1].response_404}</p>
                 </div>
@@ -325,7 +345,7 @@ const API = () => {
                     src={Arrow}
                     alt="project images"
                     className="api-icon-arraw"
-                    onClick={handleArrowClick2}
+                    onClick={handleArrowClick5}
                   />
                 </span>
                 <span className="icon-check">
@@ -333,7 +353,7 @@ const API = () => {
                 </span>
                 <span className="api-response-title">Response 500</span>
               </div>
-              {showResponse500 && (
+              {showResponse5 && (
                 <div className="api-response-content">
                   <p>{APIData[1].response_500}</p>
                 </div>
