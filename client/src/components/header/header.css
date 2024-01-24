@@ -39,6 +39,14 @@
     flex-direction: column;
     transition: .3s;
 }
+.nav_api{
+    font-family: var(--header-font);
+    color:var(--body-color);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+}
 .active-link,
 .nav_link:hover {
     color:var(  --title-color);
